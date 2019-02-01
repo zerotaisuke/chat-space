@@ -1,5 +1,16 @@
 # README
 
+##members
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false|
+|group_id|integer|null: false|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+
 ##users
 
 |Column|Type|Options|
@@ -9,22 +20,33 @@
 |password|string|null: false|
 
 ### Association
-- has_many :groups
+- has_many :groups through members
 - has_many :tweets
 - has_many :comments
+
+
+##groups
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+- has_many :users through members
+- has_many :tweets
 
 
 ##tweets
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: true|
-|image|image|null: true|
-|user_id|string|null: false|
+|text|text||
+|image|image||
+|member_id|integer|null: false|
 
 ### Association
 - be_longs :user
-- be_longs :groups
+- be_longs :groups through members
 - has_many :comments
 
 
@@ -32,22 +54,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: true|
-|image|image|null: true|
-|tweet_id|string|null: false|
-|user_id|string|null: false|
+|text|text||
+|image|image||
+|tweet_id|integer|null: false|
+|member_id|integer|null: false|
 
 ### Association
-- be_longs :user
+- be_longs :users through members
 - be_longs :tweet
-
-
-##groups
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|string|null: false|
-
-### Association
-- has_many :user
-
