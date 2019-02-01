@@ -21,7 +21,7 @@
 
 ### Association
 - has_many :groups through members
-- has_many :tweets
+- has_many :messages
 - has_many :comments
 
 
@@ -33,20 +33,21 @@
 
 ### Association
 - has_many :users through members
-- has_many :tweets
+- has_many :messages
 
 
-##tweets
+##messages
 
 |Column|Type|Options|
 |------|----|-------|
 |text|text||
 |image|image||
-|member_id|integer|null: false|
+|group_id|integer|null: false|
+|user_id|integer|null: false|
 
 ### Association
-- be_longs :user
-- be_longs :groups through members
+- belongs_to :user
+- belongs_to :groups through members
 - has_many :comments
 
 
@@ -56,9 +57,10 @@
 |------|----|-------|
 |text|text||
 |image|image||
-|tweet_id|integer|null: false|
-|member_id|integer|null: false|
+|message_id|integer|null: false|
+|group_id|integer|null: false|
+|user_id|integer|null: false|
 
 ### Association
-- be_longs :users through members
-- be_longs :tweet
+- belongs_to :users through members
+- belongs_to :tweet
