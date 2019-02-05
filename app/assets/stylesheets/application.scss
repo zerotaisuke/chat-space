@@ -1,1 +1,171 @@
 @import "./reset";
+
+.users {
+float: left;
+width: 300px;
+height: 100vh;
+
+  .userinfo{
+  background-color: #253141;
+  height: 100px;
+  }
+
+  .userinfo__header--username{
+    font-size: 16px;
+    color: white;
+    position: relative;
+    top: 50px;
+    left: 20px;
+  }
+
+    .gear{
+    color: white;
+    position: relative;
+    top: 50px;
+    left: 130px;
+  }
+
+    .edit{
+      color: white;
+      position: relative;
+      top: 50px;
+      left: 130px;
+    }
+
+
+  .usergroup{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+
+    .usergroup-list{
+    }
+
+    .usergroup-name{
+      font-size: 15px;
+      color: white;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+    .usergroup-new-message{
+      font-size: 11px;
+      color: white;
+      position: relative;
+      top: 25px;
+      left: 20px;
+    }
+
+  }
+}
+
+
+.messages{
+  width:calc(100vw - 300px);
+  height: 100vh;
+  float: left;
+  background-color: #AAAAAA;
+
+  .messages__group-nav{
+  height: 100px;
+  background-color: white;
+  border: 1px solid #eeeeee;
+  width:calc(100vw - 300px);
+  float: left;
+  position: relative;
+
+    .messages__group-name{
+      position: relative;
+      top: 35px;
+      left: 40px;
+      font-size: 20px;
+    }
+
+    .messages__edit-btn{
+      position: relative;
+      top: 35px;
+      left: calc(100vw - 600px);
+      border: 1px solid blue;
+      padding: 20px;
+    }
+
+    .messages__member{
+      position: absolute;
+      bottom: 0;
+      left: 40px;
+      font-size: 12px;
+
+    }
+  }
+
+  .messages__show{
+    height: calc(100vh - 200px);
+    width:calc(100vw - 300px);
+    background-color: #aaa;
+    float: left;
+    position: relative;
+
+      .messages__show_name{
+      font-size: 16px;
+      position: relative;
+      top: 46px;
+      left: 40px;
+    }
+
+      .messages__show_message{
+      font-size: 14px;
+      position: relative;
+      top: 56px;
+      left: 40px;
+    }
+  }
+
+  .message__send{
+    height: 90px;
+    width:calc(100vw - 300px);
+    position: absolute;
+    bottom: 0;
+    float: left;
+    .message__send_input{
+      position: relative;
+      height: 50px;
+      width:calc(100vw - 550px);
+      background-color: white;
+      top: 20px;
+      left: 40px;
+
+      .image{
+          color: black;
+          position: relative;
+          float: right;
+          top: 15px;
+          right: 20px;
+      }
+    }
+
+    .messages__send-btn{
+      position: relative;
+      top: -17px;
+      border: 1px solid blue;
+      padding: 15px;
+      left: calc(100vw - 475px);
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
