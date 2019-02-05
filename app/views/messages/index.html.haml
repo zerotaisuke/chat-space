@@ -1,0 +1,29 @@
+.users
+  %section.userinfo
+    %span.userinfo__header--username username
+    %i.far.fa-edit.edit
+    %i.fas.fa-cog.gear
+  %section.usergroup
+    .usergroup-list
+      %ul.usergroup
+        %li.usergroup-name groupname
+        %li.usergroup-new-message newmessage
+.messages
+  %section.messages__group-nav
+    %span.messages__group-name
+      groupname
+    %span.messages__edit-btn
+      Edit
+    %p.messages__member
+      member
+  %section.messages__show
+    %ul
+      %li.messages__show_name name
+      %li.messages__show_date date
+    .messages__show_message
+      message
+  %section.message__send
+    .message__send_input
+      %i.far.fa-image.image
+    %span.messages__send-btn
+      Send
