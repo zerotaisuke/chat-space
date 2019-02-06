@@ -86,8 +86,9 @@ height: 100vh;
     .messages__edit-btn{
       position: relative;
       top: 35px;
-      left: calc(100vw - 600px);
-      border: 1px solid blue;
+      left: 835px;
+      border: 1px solid aqua;
+      color: aqua;
       padding: 20px;
     }
 
@@ -134,40 +135,39 @@ height: 100vh;
 
   .message__send{
     height: 90px;
-    width:calc(100vw - 300px);
-    position: absolute;
     bottom: 0;
     float: left;
     .message__send_input{
       position: relative;
       height: 50px;
-      width:calc(100vw - 550px);
+      width:calc(100vw - 600px);
       background-color: white;
       top: 20px;
       left: 40px;
 
       .image{
-          color: black;
-          position: relative;
-          float: right;
+        position: absolute;
+          float: left;
           top: 15px;
-          right: 20px;
+          right: 25px;
       }
     }
 
     .messages__send-btn{
       position: relative;
-      top: -17px;
-      border: 1px solid blue;
-      padding: 15px;
+      top: -29px;
+      width: 45px;
+      border: 1px solid aqua;
+      padding: 12px;
+      float:left;
       left: calc(100vw - 475px);
+      background-color: aqua;
+      color:white;
     }
 
   }
 
 }
-
-
 
 
 
