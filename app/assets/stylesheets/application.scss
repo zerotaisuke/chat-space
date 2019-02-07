@@ -1,0 +1,216 @@
+@import "./reset";
+
+.chat-space{
+  width: 100vw;
+  height: 100vh;
+  background-color: #AAAAAA;
+  display: flex;
+
+
+.users {
+width: 300px;
+height: 100vh;
+position: relative;
+
+  .userinfo{
+  background-color: #253141;
+  height: 100px;
+  position: relative;
+  }
+
+  .userinfo__header--username{
+    font-size: 16px;
+    color: white;
+    position: relative;
+    top: 50px;
+    left: 20px;
+    font-weight: bold;
+  }
+
+    .gear{
+    color: white;
+    position: relative;
+    top: 50px;
+    left: 130px;
+  }
+
+    .edit{
+      color: white;
+      position: relative;
+      top: 50px;
+      left: 130px;
+    }
+
+
+  .usergroup{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    position: relative;
+
+    .usergroup-list{
+    }
+
+    .usergroup-name{
+      font-size: 15px;
+      color: #ffffff;
+      position: relative;
+      top: 20px;
+      left: 20px;
+      width: 260px;
+    }
+
+    .usergroup-new-message{
+      font-size: 11px;
+      color: #ffffff;
+      position: relative;
+      top: 25px;
+      left: 20px;
+      width: 260px;
+    }
+
+  }
+}
+
+
+.messages{
+  width:calc(100vw - 300px);
+  height: 100vh;
+
+  .messages__group-nav{
+  height: 100px;
+  background-color: white;
+  border: 1px solid #eeeeee;
+  width:calc(100vw - 300px);
+  position: relative;
+
+    .messages__group-name{
+      position: relative;
+      top: 35px;
+      left: 40px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .messages__edit-btn{
+      position: relative;
+      top: 28px;
+      right:40px;
+      height: 40px;
+      float: right;
+      border: solid 3px #38aef0;
+      color: #38aef0;
+      padding: 0px 20px;
+      display: flex;
+
+      .messages__edit-btn_inner{
+        color : #38aef0;
+        margin: auto;
+      }
+
+    }
+
+    .messages__member{
+      position: absolute;
+      bottom: 0;
+      left: 40px;
+      font-size: 12px;
+      color: #999999;
+    }
+  }
+
+  .messages__show{
+    height: calc(100vh - 200px);
+    width:calc(100vw - 300px);
+    background-color: white;
+    position: relative;
+
+      .messages__show_name{
+      font-size: 16px;
+      position: relative;
+      top: 46px;
+      left: 40px;
+      display: inline-block;
+    }
+
+      .messages__show_date{
+      font-size: 12px;
+      position: relative;
+      top: 46px;
+      left: 50px;
+      color: #999999;
+      display: inline-block;
+    }
+
+      .messages__show_message{
+      font-size: 14px;
+      position: relative;
+      top: 56px;
+      left: 40px;
+    }
+  }
+
+  .message__send{
+    height: 90px;
+    bottom: 0;
+    background-color: #AAAAAA;
+    display: flex;
+
+    .message__send_input{
+      position: relative;
+      height: 50px;
+      width:calc(100vw - 520px);
+      background-color: white;
+      top: 20px;
+      left: 40px;
+
+    .comment{
+      position: relative;
+      float: left;
+      padding: 13px 10px;
+      font-size: 16px;
+      color: #434A54;
+     }
+
+    .image{
+      position: relative;
+      float:right;
+      padding: 14px 10px;
+    }
+
+    }
+
+    .messages__send-btn{
+      position: relative;
+      height: 50px;
+      width: 120px;
+      top: 20px;
+      left: 55px;
+      display: flex;
+      border: 1px solid #38aef0;
+      background-color: #38aef0;
+
+      .comment{
+        font-size: 16px;
+        color:white;
+        margin: auto;
+     }
+
+
+    }
+
+  }
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
