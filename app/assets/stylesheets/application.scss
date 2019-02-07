@@ -1,6 +1,6 @@
 @import "./reset";
 
-@import "./user";
+@import "modules/user";
 
 // @import "font-awesome";
 // @import "config/colors";
@@ -8,7 +8,10 @@
 // @import "config/reset";
 // @import "mixins/mixin";
 // @import "mixins/vendor_prefix";
-s
+// @import "modules/side_bar";
+// @import "modules/chat";
+// @import "messages/messages.scss";
+
 .chat-space{
   width: 100vw;
   height: 100vh;
