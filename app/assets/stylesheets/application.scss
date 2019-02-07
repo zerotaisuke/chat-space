@@ -1,13 +1,21 @@
 @import "./reset";
 
+.chat-space{
+  width: 100vw;
+  height: 100vh;
+  background-color: #AAAAAA;
+  display: flex;
+
+
 .users {
-float: left;
 width: 300px;
 height: 100vh;
+position: relative;
 
   .userinfo{
   background-color: #253141;
   height: 100px;
+  position: relative;
   }
 
   .userinfo__header--username{
@@ -37,6 +45,7 @@ height: 100vh;
   .usergroup{
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+    position: relative;
 
     .usergroup-list{
     }
@@ -47,6 +56,7 @@ height: 100vh;
       position: relative;
       top: 20px;
       left: 20px;
+      width: 260px;
     }
 
     .usergroup-new-message{
@@ -55,6 +65,7 @@ height: 100vh;
       position: relative;
       top: 25px;
       left: 20px;
+      width: 260px;
     }
 
   }
@@ -64,15 +75,12 @@ height: 100vh;
 .messages{
   width:calc(100vw - 300px);
   height: 100vh;
-  float: left;
-  background-color: #AAAAAA;
 
   .messages__group-nav{
   height: 100px;
   background-color: white;
   border: 1px solid #eeeeee;
   width:calc(100vw - 300px);
-  float: left;
   position: relative;
 
     .messages__group-name{
@@ -85,11 +93,20 @@ height: 100vh;
 
     .messages__edit-btn{
       position: relative;
-      top: 35px;
-      left: 835px;
-      border: 1px solid aqua;
-      color: aqua;
-      padding: 20px;
+      top: 28px;
+      right:40px;
+      height: 40px;
+      float: right;
+      border: solid 3px #38aef0;
+      color: #38aef0;
+      padding: 0px 20px;
+      display: flex;
+
+      .messages__edit-btn_inner{
+        color : #38aef0;
+        margin: auto;
+      }
+
     }
 
     .messages__member{
@@ -105,7 +122,6 @@ height: 100vh;
     height: calc(100vh - 200px);
     width:calc(100vw - 300px);
     background-color: white;
-    float: left;
     position: relative;
 
       .messages__show_name{
@@ -136,33 +152,50 @@ height: 100vh;
   .message__send{
     height: 90px;
     bottom: 0;
-    float: left;
+    background-color: #AAAAAA;
+    display: flex;
+
     .message__send_input{
       position: relative;
       height: 50px;
-      width:calc(100vw - 600px);
+      width:calc(100vw - 520px);
       background-color: white;
       top: 20px;
       left: 40px;
 
-      .image{
-        position: absolute;
-          float: left;
-          top: 15px;
-          right: 25px;
-      }
+    .comment{
+      position: relative;
+      float: left;
+      padding: 13px 10px;
+      font-size: 16px;
+      color: #434A54;
+     }
+
+    .image{
+      position: relative;
+      float:right;
+      padding: 14px 10px;
+    }
+
     }
 
     .messages__send-btn{
       position: relative;
-      top: -29px;
-      width: 45px;
-      border: 1px solid aqua;
-      padding: 12px;
-      float:left;
-      left: calc(100vw - 475px);
-      background-color: aqua;
-      color:white;
+      height: 50px;
+      width: 120px;
+      top: 20px;
+      left: 55px;
+      display: flex;
+      border: 1px solid #38aef0;
+      background-color: #38aef0;
+
+      .comment{
+        font-size: 16px;
+        color:white;
+        margin: auto;
+     }
+
+
     }
 
   }
@@ -171,7 +204,7 @@ height: 100vh;
 
 
 
-
+}
 
 
 

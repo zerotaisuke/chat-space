@@ -1,32 +1,36 @@
 
-.users
-  %section.userinfo
-    %span.userinfo__header--username username
-    %i.far.fa-edit.edit
-    %i.fas.fa-cog.gear
-  %section.usergroup
-    .usergroup-list
-      %ul.usergroup
-        %li.usergroup-name groupname
-        %li.usergroup-new-message newmessage
-.messages
-  %section.messages__group-nav
-    %span.messages__group-name
-      groupname
-    %span.messages__edit-btn
-      Edit
-    %p.messages__member
-      member
-  %section.messages__show
-    %ul
-      %li.messages__show_name name
-      %li.messages__show_date date
-    %span.messages__show_message
-      message
-  %section.message__send
-    .message__send_input
+.chat-space
 
-      %i.far.fa-image.image
+  .users
+    %section.userinfo
+      %span.userinfo__header--username username
+      %i.far.fa-edit.edit
+      %i.fas.fa-cog.gear
+    %section.usergroup
+      .usergroup-list
+        %ul.usergroup
+          %li.usergroup-name groupname
+          %li.usergroup-new-message newmessage
 
-    %span.messages__send-btn
-      Send
+  .messages
+    %section.messages__group-nav
+      %span.messages__group-name
+        groupname
+      %span.messages__edit-btn
+        %p.messages__edit-btn_inner
+          Edit
+      %span.messages__member
+        member
+    %section.messages__show
+      %ul
+        %li.messages__show_name name
+        %li.messages__show_date date
+      %span.messages__show_message
+        message
+    %section.message__send
+      .message__send_input
+        %p.comment sample text
+        %i.far.fa-image.image
+
+      %span.messages__send-btn
+        %span.comment   Send
