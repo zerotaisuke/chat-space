@@ -1,5 +1,24 @@
 @import "./reset";
 
+@import "modules/user";
+@import "config/colors";
+@import "modules/flash";
+@import "modules/group";
+@import "font-awesome";
+@import "modules/user";
+
+
+
+
+
+// @import "config/size";
+// @import "config/reset";
+// @import "mixins/mixin";
+// @import "mixins/vendor_prefix";
+// @import "modules/side_bar";
+// @import "modules/chat";
+// @import "messages/messages.scss";
+
 .chat-space{
   width: 100vw;
   height: 100vh;
@@ -16,6 +35,7 @@ position: relative;
   background-color: #253141;
   height: 100px;
   position: relative;
+  display: flex;
   }
 
   .userinfo__header--username{
@@ -26,6 +46,51 @@ position: relative;
     left: 20px;
     font-weight: bold;
   }
+
+  .userinfo__header--lists{
+    position: relative;
+    top: 50px;
+    left: 130px;
+    display: flex;
+
+    .icon{
+    color: white;
+    position: relative;
+    // top: 50px;
+    // left: 130px;
+  }
+
+
+  }
+
+
+  .usergroups{
+    // background-color: #2f3e51;
+    // height: calc(100vh - 100px);
+    // position: relative;
+
+    .usergroup-list{
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+      position: relative;
+
+      .usergroup-name{
+        font-size: 15px;
+        color: #ffffff;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        width: 260px;
+      }
+      .usergroup-new-message{
+        font-size: 11px;
+        color: #ffffff;
+        position: relative;
+        top: 25px;
+        left: 20px;
+        width: 260px;
+      }
+    }
 
     .gear{
     color: white;
