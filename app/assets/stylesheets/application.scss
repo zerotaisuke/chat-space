@@ -91,6 +91,48 @@ position: relative;
         width: 260px;
       }
     }
+
+    .gear{
+    color: white;
+    position: relative;
+    top: 50px;
+    left: 130px;
+  }
+
+    .edit{
+      color: white;
+      position: relative;
+      top: 50px;
+      left: 130px;
+    }
+
+
+  .usergroup{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    position: relative;
+
+    .usergroup-list{
+    }
+
+    .usergroup-name{
+      font-size: 15px;
+      color: #ffffff;
+      position: relative;
+      top: 20px;
+      left: 20px;
+      width: 260px;
+    }
+
+    .usergroup-new-message{
+      font-size: 11px;
+      color: #ffffff;
+      position: relative;
+      top: 25px;
+      left: 20px;
+      width: 260px;
+    }
+
   }
 }
 
