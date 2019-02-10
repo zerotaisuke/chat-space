@@ -3,8 +3,14 @@
 @import "modules/user";
 @import "config/colors";
 @import "modules/flash";
+@import "modules/group";
+@import "font-awesome";
+@import "modules/user";
 
-// @import "font-awesome";
+
+
+
+
 // @import "config/size";
 // @import "config/reset";
 // @import "mixins/mixin";
@@ -59,31 +65,32 @@ position: relative;
 
 
   .usergroup{
-    background-color: #2f3e51;
-    height: calc(100vh - 100px);
-    position: relative;
+    // background-color: #2f3e51;
+    // height: calc(100vh - 100px);
+    // position: relative;
 
     .usergroup-list{
-    }
-
-    .usergroup-name{
-      font-size: 15px;
-      color: #ffffff;
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
       position: relative;
-      top: 20px;
-      left: 20px;
-      width: 260px;
-    }
 
-    .usergroup-new-message{
-      font-size: 11px;
-      color: #ffffff;
-      position: relative;
-      top: 25px;
-      left: 20px;
-      width: 260px;
+      .usergroup-name{
+        font-size: 15px;
+        color: #ffffff;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        width: 260px;
+      }
+      .usergroup-new-message{
+        font-size: 11px;
+        color: #ffffff;
+        position: relative;
+        top: 25px;
+        left: 20px;
+        width: 260px;
+      }
     }
-
   }
 }
 
