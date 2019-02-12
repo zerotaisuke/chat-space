@@ -68,75 +68,84 @@
 
 
     .usergroups{
+      height: calc(100vh - 100px);
+      padding: 0 20px;
+      background-color: $side_blue_light;
       // background-color: #2f3e51;
       // height: calc(100vh - 100px);
       // position: relative;
 
       .usergroup-list{
-        background-color: #2f3e51;
-        height: calc(100vh - 100px);
-        position: relative;
+        box-sizing: border-box;
+        padding: 20px 0 40px;
+        // background-color: #2f3e51;
+        // height: calc(100vh - 100px);
+        // position: relative;
 
         .usergroup-name{
-          font-size: 15px;
-          color: #ffffff;
-          position: relative;
-          top: 20px;
-          left: 20px;
-          width: 260px;
+          color: white;
+          // font-size: 15px;
+          // color: #ffffff;
+          // position: relative;
+          // top: 20px;
+          // left: 20px;
+          // width: 260px;
         }
         .usergroup-new-message{
-          font-size: 11px;
-          color: #ffffff;
-          position: relative;
-          top: 25px;
-          left: 20px;
-          width: 260px;
+          color: white;
+          margin-top: 5px;
+          // font-size: 11px;
+          // color: #ffffff;
+          // position: relative;
+          // top: 25px;
+          // left: 20px;
+          // width: 260px;
         }
       }
 
-      .gear{
-      color: white;
-      position: relative;
-      top: 50px;
-      left: 130px;
-    }
+    //   .gear{
+    //   color: white;
+    //   position: relative;
+    //   top: 50px;
+    //   left: 130px;
+    // }
 
-      .edit{
-        color: white;
-        position: relative;
-        top: 50px;
-        left: 130px;
-      }
+    //   .edit{
+    //     color: white;
+    //     position: relative;
+    //     top: 50px;
+    //     left: 130px;
+    //   }
 
 
-    .usergroup{
-      background-color: #2f3e51;
-      height: calc(100vh - 100px);
-      position: relative;
+    // .usergroup{
+    //   background-color: #2f3e51;
+    //   height: calc(100vh - 100px);
 
-      .usergroup-list{
-      }
+    //   .usergroup-list{
+    //     padding: 0 20px;
+    //   }
 
-      .usergroup-name{
-        font-size: 15px;
-        color: #ffffff;
-        position: relative;
-        top: 20px;
-        left: 20px;
-        width: 260px;
-      }
+    //   .usergroup-name{
+    //     font-size: 15px;
+    //     color: #ffffff;
+    //     position: relative;
+    //     top: 20px;
+    //     left: 20px;
+    //     width: 260px;
+    //   }
 
-      .usergroup-new-message{
-        font-size: 11px;
-        color: #ffffff;
-        position: relative;
-        top: 25px;
-        left: 20px;
-        width: 260px;
-      }
+    //   .usergroup-new-message{
+    //     font-size: 11px;
+    //     color: #ffffff;
+    //     position: relative;
+    //     top: 25px;
+    //     left: 20px;
+    //     width: 260px;
+    //     margin-top: 5px;
+    //   }
 
-    }
+    // }
     }
   }
 
