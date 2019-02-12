@@ -17,7 +17,24 @@
           .usergroup-name
             = group.name
           .usergroup-new-message
-            メッセージはまだありません。
-      / %ul.usergroup
-      /   %li.usergroup-name groupname
-      /   %li.usergroup-new-message newmessage
+            = group.show_last_message
+/ .side-bar
+/   .header
+/     %h3.header__name
+/       = current_user.name
+/     %ul.header--lists
+/       %li.list
+/       =link_to new_group_path do
+/         =fa_icon 'edit',class: 'icon'
+/       %li.list
+/       =link_to edit_user_path(current_user) do
+/         =fa_icon 'cog',class: 'icon'
+
+/   .groups
+/     - current_user.groups.each do |group|
+/       .group
+/         = link_to group_messages_path(group) do
+/           .group-name
+/             = group.name
+/           .group-new-message
+/             = group.show_last_message
