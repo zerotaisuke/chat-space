@@ -1,36 +1,50 @@
 
 .chat-space
+  = render 'shared/side_bar'
 
-  .users
-    %section.userinfo
-      %span.userinfo__header--username username
-      %i.far.fa-edit.edit
-      %i.fas.fa-cog.gear
-    %section.usergroup
-      .usergroup-list
-        %ul.usergroup
-          %li.usergroup-name groupname
-          %li.usergroup-new-message newmessage
+  / .users
+  /   %section.userinfo
+  /     %span.userinfo__header--username username
+  /     %i.far.fa-edit.edit
+  /     %i.fas.fa-cog.gear
+  /   %section.usergroup
+  /     .usergroup-list
+  /       %ul.usergroup
+  /         %li.usergroup-name groupname
+  /         %li.usergroup-new-message newmessage
 
-  .messages
-    %section.messages__group-nav
-      %span.messages__group-name
-        groupname
+  .chat
+    %section.header
+      %span.left-header__title
+        groupname aaa
       %span.messages__edit-btn
         %p.messages__edit-btn_inner
           Edit
-      %span.messages__member
+      %span.left-header__member
         member
-    %section.messages__show
-      %ul
-        %li.messages__show_name name
-        %li.messages__show_date date
-      %span.messages__show_message
-        message
-    %section.message__send
-      .message__send_input
-        %p.comment sample text
-        %i.far.fa-image.image
 
-      %span.messages__send-btn
-        %span.comment   Send
+    .messages
+      = render @messages
+
+    / %section.messages__show
+    /   %ul
+    /     %li.messages__show_name name
+    /     %li.messages__show_date date
+    /   %span.messages__show_message
+    /     message
+    / %section.message__send
+    /   .message__send_input
+    /     %p.comment sample text
+    /     %i.far.fa-image.image
+
+    /   %span.messages__send-btn
+    /     %span.comment   Send
+
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
