@@ -42,7 +42,7 @@
     /     %span.comment   Send
 
     .form
-      = form_for [@group, @message], html: { id: 'js_form'} do |f|
+      = form_for [@group, @message], html: { id: 'SendMessage'} do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
           = f.label :image, class: 'form__mask__image' do

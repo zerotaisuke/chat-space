@@ -1,6 +1,5 @@
 $(function(){
-  function buildHTML(message){
-
+  function buildSendMessageHTML(message){
     var image = (message.imege? 'asset_path src=${message.image}' : '');
 
     var html =
@@ -23,7 +22,7 @@ $(function(){
       return html;
     }
 
-$('#js_form').on('submit', function(e){
+$('#SendMessage').on('submit', function(e){
   e.preventDefault();
   var formData = new FormData(this);
   var url = $(this).attr('action')
@@ -35,8 +34,8 @@ $('#js_form').on('submit', function(e){
     processData: false,
     contentType: false
   })
-  .done(function(data){
-    var html = buildHTML(data);
+  .done(function(LatestMessage){
+    var html = buildSendMessageHTML(LatestMessage);
     $('.messages').append(html);
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     $('form')[0].reset();
