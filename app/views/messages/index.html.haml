@@ -16,8 +16,9 @@
   .chat
     %section.header
       %span.left-header__title
-        groupname aaa
+        =@group.name
       %span.messages__edit-btn
+
         %p.messages__edit-btn_inner
           Edit
       %span.left-header__member
@@ -41,7 +42,7 @@
     /     %span.comment   Send
 
     .form
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], html: { id: 'js_form'} do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
           = f.label :image, class: 'form__mask__image' do
