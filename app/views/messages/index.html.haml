@@ -2,17 +2,6 @@
 .chat-space
   = render 'shared/side_bar'
 
-  / .users
-  /   %section.userinfo
-  /     %span.userinfo__header--username username
-  /     %i.far.fa-edit.edit
-  /     %i.fas.fa-cog.gear
-  /   %section.usergroup
-  /     .usergroup-list
-  /       %ul.usergroup
-  /         %li.usergroup-name groupname
-  /         %li.usergroup-new-message newmessage
-
   .chat
     %section.header
       %span.left-header__title
@@ -26,20 +15,6 @@
 
     .messages
       = render @messages
-
-    / %section.messages__show
-    /   %ul
-    /     %li.messages__show_name name
-    /     %li.messages__show_date date
-    /   %span.messages__show_message
-    /     message
-    / %section.message__send
-    /   .message__send_input
-    /     %p.comment sample text
-    /     %i.far.fa-image.image
-
-    /   %span.messages__send-btn
-    /     %span.comment   Send
 
     .form
       = form_for [@group, @message], html: { id: 'SendMessage'} do |f|
