@@ -1,6 +1,6 @@
 $(function(){
   function buildSendMessageHTML(message){
-    var image = (message.imege? 'asset_path src=${message.image}' : '');
+    var imagehtml = message.imege == null ? "" :'<img src="${message.image}" class= "lower-message__image">'
 
     var html =
        `<div class="message" data-message-id=${message.id}>
@@ -16,8 +16,8 @@ $(function(){
             <p class="lower-message__content">
               ${message.content}
             </p>
+              ${imagehtml}
           </div>
-          ${image}
         </div>`
       return html;
     }
