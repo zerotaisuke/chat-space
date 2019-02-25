@@ -83,10 +83,10 @@ $(function() {
   };
 
   if (window.location.href.match(/\/groups\/\d+\/messages/)){
-       setInterval(autoUpdate,5000)
+       setInterval(group_message_autoUpdate,5000)
   };
 
-  function autoUpdate() {
+  function group_message_autoUpdate() {
     var href = window.location.href;
     var lastId = $('.message').last().attr('data-messageid');
 
@@ -96,8 +96,8 @@ $(function() {
       type:'GET',
     })
 
-    .done(function(data) {
-       data.messages.forEach(function(message){
+    .done(function(groupmessage) {
+       groupmessage.messages.forEach(function(message){
          if (message.id > lastId){
            var html = addNewMessagesHTML(message);
            $('.messages').append(html);
