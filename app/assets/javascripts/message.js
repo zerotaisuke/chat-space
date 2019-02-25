@@ -51,21 +51,20 @@ $('#SendMessage').on('submit', function(e){
 
   function GroupMessageAutoUpdate() {
     var href = window.location.href;
-    var lastId = $('.message').last().attr('data-messageid');
+    var lastId = $('.message').last().attr('data-message-id');
 
     $.ajax({
       url: href,
       dataType:'json',
       type:'GET',
+      data: {id: lastId}
     })
 
     .done(function(groupmessage) {
        groupmessage.messages.forEach(function(message){
-         if (message.id > lastId){
-           var html = buildSendMessageHTML(LatestMessage);
+           var html = buildSendMessageHTML(message);
            $('.messages').append(html);
            $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-         };
        });
     })
     .fail(function(){

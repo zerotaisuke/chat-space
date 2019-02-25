@@ -1,4 +1,4 @@
-json.messages    @messages.each do |message|
+json.messages    @new_messages.each do |message|
   json.name        message.user.name
   json.date        message.created_at.strftime('%Y/%m/%d %R')
   json.image       message.image.url
