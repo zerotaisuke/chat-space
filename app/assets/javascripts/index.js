@@ -97,7 +97,6 @@ $(function() {
     })
 
     .done(function(data) {
-      console.log(data)
        data.messages.forEach(function(message){
          if (message.id > lastId){
            var html = addNewMessagesHTML(message);
