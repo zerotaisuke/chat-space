@@ -83,10 +83,10 @@ $(function() {
   };
 
   if (window.location.href.match(/\/groups\/\d+\/messages/)){
-       setInterval(group_message_autoUpdate,5000)
+       setInterval(GroupMessageAutoUpdate,5000)
   };
 
-  function group_message_autoUpdate() {
+  function GroupMessageAutoUpdate() {
     var href = window.location.href;
     var lastId = $('.message').last().attr('data-messageid');
 
