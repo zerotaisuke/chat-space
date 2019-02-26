@@ -65,3 +65,7 @@ gem "font-awesome-rails"
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+
+group :roduction do
+  gem 'unicorn'
+end
