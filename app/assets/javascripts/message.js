@@ -1,6 +1,6 @@
 $(function(){
   function buildSendMessageHTML(message){
-    var image = (message.imege? 'asset_path src=${message.image}' : '');
+    var imagehtml = message.imege == null ? "" :'<img src="${message.image}" class= "lower-message__image">'
 
     var html =
        `<div class="message" data-message-id=${message.id}>
@@ -16,8 +16,8 @@ $(function(){
             <p class="lower-message__content">
               ${message.content}
             </p>
+              ${imagehtml}
           </div>
-          ${image}
         </div>`
       return html;
     }
@@ -44,5 +44,32 @@ $('#SendMessage').on('submit', function(e){
   });
   return false;
 });
+
+  if (window.location.href.match(/\/groups\/\d+\/messages/)){
+       setInterval(GroupMessageAutoUpdate,5000)
+  };
+
+  function GroupMessageAutoUpdate() {
+    var href = window.location.href;
+    var lastId = $('.message').last().attr('data-message-id');
+
+    $.ajax({
+      url: href,
+      dataType:'json',
+      type:'GET',
+      data: {id: lastId}
+    })
+
+    .done(function(groupmessage) {
+       groupmessage.messages.forEach(function(message){
+           var html = buildSendMessageHTML(message);
+           $('.messages').append(html);
+           $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+       });
+    })
+    .fail(function(){
+      alert('メッセージの取得に失敗しました');
+    });
+  };
 
 });

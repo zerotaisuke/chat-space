@@ -59,6 +59,5 @@ $(function() {
     $input = $(this);
     $input.parent().remove();
   });
-
 });
 
